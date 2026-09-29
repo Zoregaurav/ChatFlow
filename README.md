@@ -638,7 +638,5 @@ Building ChatFlow helped me practice how these components work together to form 
 
 **Gaurav**
 
-Backend Developer | Node.js | Express.js | MongoDB | Redis
-
 GitHub:  
 https://github.com/Zoregaurav
