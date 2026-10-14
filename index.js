@@ -8,12 +8,19 @@ import cookieParser from "cookie-parser";
 import authUserMiddleware from "./middlewares/authUserMiddleware.js";
 import chatRouter from "./routes/chatRouter.js";
 import { connectRedis } from "./config/redis.js";
-
+import cors from "cors";
 
 // dotenv.config();   //real case
 
 
 const app = express();
+
+app.use(
+   cors({
+      origin:"http://localhost:5173",
+      credentials:true,
+   })
+)
 
 
 // app.use("/",(req,res)=>{
@@ -68,7 +75,7 @@ const startServer = async()=>{
       await connectRedis();
 
      app.listen(process.env.PORT,()=>{
-        console.log("server has started listening at port 3000");
+        console.log(`server has started listening at port ${process.env.PORT}`);
      })
     } catch (err) {
        console.log(err);

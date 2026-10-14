@@ -3,7 +3,7 @@ import messageRouter from "../routes/messageRouter.js";
 import Message from "../model/messageSchema.js"
 import mongoose from "mongoose";
 // import openRouter from "../config/gemini.js";
-import { generateAIResponse } from "../services/geminiService.js";
+import { generateAIResponse } from "../services/openRouterService.js";
 import { buildMessagesForAI } from "../utils/chatContext.js";
 import {addUserTokenUsage } from "../utils/userUsage.js";
 import {addChatTokenUsage} from "../utils/tokenUsage.js";
@@ -23,7 +23,7 @@ export const getMessage = async (req, res) => {
   try {
     const chat = await Chat.findOne({
       _id: chatId,
-      userId: req.user._id
+      userId: req.userId
     });
 
     if (!chat) {
@@ -203,6 +203,7 @@ export const sendMessage = async (req, res) => {
 
   } catch (err) {
     console.log("sendMessage error:",err.message);
+    console.log(err);
     res.status(500).json({
       message: "Something went wrong"
     });
