@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+
+.message-content {
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.message-content p {
+  margin: 0 0 12px;
+}
+
+.message-content pre {
+  max-width: 100%;
+  overflow-x: auto;
+  border-radius: 10px;
+  margin: 12px 0;
+}
+
+.message-content code {
+  background: #2a2a2a;
+  display: block;
+  padding: 4px;
+}
+.message-content pre code {
+  font-size: 0.9rem;
+}
+
+.message-content ul,
+.message-content ol {
+  padding-left: 24px;
+  margin: 10px 0;
+}
+
+.message-content h1,
+.message-content h2,
+.message-content h3 {
+  margin: 18px 0 10px;
+  font-weight: 600;
+}
+
+
+.code-block {
+  margin: 16px 0;
+  overflow: hidden;
+  border: 1px solid #3a3a3a;
+  border-radius: 10px;
+  background: #171717;
+  max-width: 100%;
+}
+
+.code-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #252525;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.code-language {
+  color: #d4d4d4;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.copy-code-button {
+  border: 1px solid #555;
+  border-radius: 6px;
+  padding: 5px 10px;
+  background: transparent;
+  color: #e5e5e5;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.copy-code-button:hover {
+  background: #3a3a3a;
+}
+
+.copy-code-button:focus-visible {
+  outline: 2px solid #aaa;
+  outline-offset: 2px;
+}
+
+
+/* Inline code inside normal messages */
+.message-content :not(pre) > code {
+  background: #303030;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Let the syntax highlighter control code-block styling */
+.code-block pre {
+  margin: 0 !important;
+}
+
+.code-block pre code {
+  display: block;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* Prevent long code lines from expanding the chat */
+.code-block {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.code-block pre {
+  overflow-x: auto;
+}
+
