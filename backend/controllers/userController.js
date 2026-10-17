@@ -10,6 +10,8 @@ import { redisClient } from "../config/redis.js";
 //login
 //logout
 //profile
+//usage
+//delete
 
 
 const createToken=(id,email)=>{
@@ -198,6 +200,19 @@ export const profile=async(req,res)=>{
    }
 }
 
+export const getCurrentUsage = async (req, res) => {
+    try {
+        const tokenUsed = await redisClient.get(`token-usage:${req.userId}`);
+
+        return res.status(200).json({
+            tokenUsed: Number(tokenUsed || 0),
+            tokenLimit: Number(process.env.TOKEN_LIMIT),
+        });
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({ message: "Could not load token usage" });
+    }
+};
 
 export const deleteAccount=async(req,res)=>{
      try{
