@@ -96,7 +96,7 @@ export default function ChatSidebar({
   }
 
   return (
-    <aside className="flex w-full shrink-0 flex-col border-b border-[#2f2f2f] bg-[#171717] p-3 text-[#ececec] md:h-full md:min-h-0 md:w-64 md:border-r md:border-b-0">
+    <aside className="flex w-full shrink-0 flex-col border-b border-[#2f2f2f] bg-[#171717] p-3 text-[#ececec] md:h-dvh md:min-h-0 md:w-64 md:overflow-hidden md:border-r md:border-b-0">
       {/* New Chat */}
       <Link
         to="/"
@@ -192,17 +192,15 @@ export default function ChatSidebar({
           </div>
 
           <div className="min-w-0 flex-1">
-            <p className="truncate text-sm font-medium text-[#f4f4f4]">
+            <p className="break-words text-sm font-medium leading-5 text-[#f4f4f4]">
               {name}
             </p>
-            <p className="truncate text-xs text-[#a8a8a8]">
+            <p className="truncate text-xs text-[#a8a8a8]" title={email}>
               {email || "Signed in"}
             </p>
           </div>
 
-          <span aria-hidden="true" className="text-lg text-[#a8a8a8]">
-          
-          </span>
+          <span aria-hidden="true" className="text-lg text-[#a8a8a8]"></span>
         </div>
       </div>
     </aside>

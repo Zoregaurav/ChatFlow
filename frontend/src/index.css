@@ -116,3 +116,26 @@
   overflow-x: auto;
 }
 
+
+/* ChatFlow: scrollbar at the right edge of the chat panel */
+.chat-messages {
+  scrollbar-width: thin;
+  scrollbar-color: #555 transparent;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
