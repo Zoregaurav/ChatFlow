@@ -25,7 +25,7 @@ const createToken=(id,email)=>{
 
 const cookiesOption={
    httpOnly:true,
-   secure:false,
+   secure:true,
    sameSite: "none",
    maxAge:60*60*1000
 }
