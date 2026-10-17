@@ -223,7 +223,8 @@ export const deleteAccount=async(req,res)=>{
 
        res.clearCookie("token",{
         httpOnly:true,
-        secure:false
+        secure:false,
+        sameSite: "none",
        });
      
        res.status(200).json({
