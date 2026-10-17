@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router";
 import api from "../api.js";
-import ChatSidebar from "../components/ChatSidebar.jsx";
+import ChatSidebar from "../components/ChatSideBar.jsx";
 import ChatRoom from "../components/ChatRoom.jsx";
 import { useAuthStore } from "../store/useAuthStore.js";
 import { useChatStore } from "../store/useChatStore.js";
