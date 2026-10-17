@@ -17,7 +17,7 @@ const app = express();
 
 const allowedOrigins=[
     "http://localhost:5173",
-    "https://chatflow-backend-d5uc.onrender.com"
+    "https://chatflow-frontend-zrdw.onrender.com"
 ]
 
 app.use(
