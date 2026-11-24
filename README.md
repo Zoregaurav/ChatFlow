@@ -35,6 +35,21 @@ I built ChatFlow to strengthen my full-stack development skills while focusing o
 | Validation | Zod |
 | Tools | Git, GitHub, npm |
 
+
+## 📸 UI Screenshots
+
+### Main Chat Interface
+![Signup](https://github.com/Zoregaurav/ChatFlow/blob/27b584afa3b012daa8e895eef3f4cdb4375868e7/Screenshot%202026-11-24%20214921.png)
+---
+![Login](https://github.com/Zoregaurav/ChatFlow/blob/27b584afa3b012daa8e895eef3f4cdb4375868e7/Screenshot%202026-11-24%20214901.png)
+
+### Signup
+![Signup](https://github.com/Zoregaurav/ChatFlow/blob/27b584afa3b012daa8e895eef3f4cdb4375868e7/Screenshot%202026-11-24%20214936.png)
+---
+### Login
+![Signup](https://github.com/Zoregaurav/ChatFlow/blob/27b584afa3b012daa8e895eef3f4cdb4375868e7/Screenshot%202026-11-24%20214944.png)
+---
+
 ## Application Architecture
 
 ```text
